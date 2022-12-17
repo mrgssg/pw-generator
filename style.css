@@ -1,0 +1,36 @@
+* {
+    margin: 10;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    background-color: lightgray;
+    justify-content: center;
+    text-align: center;
+    border: solid;
+    border-radius: 10px;
+    margin: 50px;
+    }
+
+.box {
+    background-color: white;
+    padding: 25px;
+    margin-left: 250px;
+    margin-right: 250px;
+    text-align: center;
+}
+
+
+button {
+    background-color: red;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+button:hover {
+    background-color: white;
+    color: black;
+}
