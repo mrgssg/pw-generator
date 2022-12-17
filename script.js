@@ -4,7 +4,8 @@ const characterCodes = Array.from(Array(26)).map( (_, i) => i + 97);
 const lowercaseLetters = characterCodes.map(code => String.fromCharCode(code));
 const uppercaseLetters = lowercaseLetters.map(letter => letter.toLocaleUpperCase())
 
-const generatePassword = (_length, hasLowercase, hasUppercase, hasNumbers, hasCharacters) =>{
+
+const generatePassword = (length, hasLowercase, hasUppercase, hasNumbers, hasCharacters) =>{
     const availableCharacters = [
         ...(hasLowercase ? lowercaseLetters : []),
         ...(hasUppercase ? lowercaseLetters : []),
@@ -16,11 +17,10 @@ const generatePassword = (_length, hasLowercase, hasUppercase, hasNumbers, hasCh
 
     for(let i = 0; i <length; i++){
         const randomIndex = Math.floor(Math.random() * availableCharacters.length);
-        password += availableCharacters[randomIndex];
-    console.log
+        password += availableCharacters(randomIndex);
 }
+generatePassword;
 
- console.log(generatePassword(8,true, true, true, true));
 
 
     
