@@ -11,10 +11,9 @@
 <body>
     <div class="container">
         <h2 class="title">Password Generator</h2> 
-            <h3 class="password-display">password</h3>
-            
+        <h3 class="password-display">password</h3>
         
-        <form class="form"></form>
+        <form id="passwordGeneratorForm" class="form">
             <label for="length"> Password length</label>
             <input type="number" min="8" max="22" value="8" id="passwordLength">
         
@@ -24,7 +23,6 @@
             <label for="includeLowercase">Include Lowercase</label>
             <input type="checkbox" id="includeLowercase"  checked/>
             
-       
             <label for="includeNumbers">Include Numbers</label>
             <input type="checkbox" id="includeNumbers" checked/>
            

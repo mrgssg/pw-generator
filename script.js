@@ -1,29 +1,25 @@
-const numbers = [1,2,3,4,5,6,7,8,9,0];
-const characters = ["!", "@", "#", "$"];
-const characterCodes = Array.from(Array(26)).map( (_, i) => i + 97);
-const lowercaseLetters = characterCodes.map(code => String.fromCharCode(code));
-const uppercaseLetters = lowercaseLetters.map(letter => letter.toLocaleUpperCase())
-const passwordEl = document.getElementById('password')
+const passwordLengthElement = document.getElementById(`passwordLength`)
+const includeUppercaseElement = document.getElementById('includeUppercase')
+const includeLowercaseElement = document.getElementById('includeLowercase')
+const includeNumbersElement = document.getElementById('includeNumbers')
+const includeSpecialCharactersElement = document.getElementById('includeSpecialCharacters')
+const form = document.getElementById('passwordGeneratorForm')
 
-passwordEl.addEventListener("click", generatePassword => {
-        ...(hasLowercase ? lowercaseLetters : []),
-        ...(hasUppercase ? lowercaseLetters : []),
-        ...(hasNumbers ? numbers : []),
-        ...(hasCharacters ? characters : [])
-});
-    
-    for(let i = 0; i <length; i++){
-        const randomIndex = Math.floor(Math.random() * availableCharacters.length);
-        password += availableCharacters[randomIndex];
+form.addEventListener('click', e => {
+        e.preventDefault()
+        const passwordLength = passwordLengthElement.value
+        const includeUppercase = includeUppercaseElement.checked
+        const includeLowercase = includeLowercaseElement.checked
+        const includeNumbers = includeNumbersElement.checked
+        const includeSpecialCharacters = includeSpecialCharactersElement.checked
+        const password = generatePassword(passwordLength, includeUppercase, includeLowercase, includeNumbers, includeSpecialCharacters)
+})
+
+function generatePassword (passwordLength, includeUppercase, includeLowercase, includeNumbers, includeSpecialCharacters) {
+string.fromCharCode(65)
 }
 
-passwordEl.innerText = generatePassword(
-hasLowercase,
-hasUppercase,
-hasNumbers,
-hasCharacters,
-length
-);
 
 
-      
+
+
